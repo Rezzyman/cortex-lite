@@ -6,7 +6,7 @@ Lightweight cognitive memory for AI agents. Zero-config, SQLite-backed, embeds l
 pip install cortex-lite
 ```
 
-> **CORTEX Lite** is the accessible on-ramp to [CORTEX](https://github.com/Rezzyman/cortex) — the memory system that scored 500/500 on LongMemEval and 94.5% on CogBench. Same core memory loop. No Postgres. No infrastructure. One file.
+> **CORTEX Lite** is the accessible on-ramp to [CORTEX](https://github.com/Rezzyman/cortex) — the cognitive memory infrastructure that scored 500/500 on LongMemEval and 94.5% on CogBench. Lite implements the same hybrid-search pattern in a single SQLite file. No Postgres. No infrastructure. Outgrow it → upgrade to full CORTEX for dream cycles, reconsolidation, CA3 pattern completion, and the full benchmark-certified stack.
 
 ---
 
@@ -200,6 +200,20 @@ stats = cx.status()
 
 - Python 3.10+
 - [Ollama](https://ollama.com) (for free local embeddings) or an OpenAI/Voyage API key
+
+---
+
+## The CORTEX ecosystem
+
+cortex-lite is one of three compatible CORTEX projects. Pick the one that matches your situation:
+
+| Project | Language | Storage | Audience | Install |
+|---|---|---|---|---|
+| **[cortex](https://github.com/Rezzyman/cortex)** | TypeScript (Node 22+) | PostgreSQL + pgvector | Production agent teams · benchmark-certified retrieval · MCP and REST | `git clone` + Docker Compose |
+| **[cortex-lite](https://github.com/Rezzyman/cortex-lite)** (this repo) | Python 3.10+ | SQLite (one file) | Individual developers · zero-config · local embeddings · 30-second quickstart | `pip install cortex-lite` |
+| **[cortex-python](https://github.com/Rezzyman/cortex-python)** | Python 3.10+ | PostgreSQL + pgvector (shares schema with cortex) | Python agent codebases that need to read and write the same memory store as a TypeScript CORTEX deployment | `pip install cortex-ai` |
+
+**cortex-lite is where you start.** It gets you a real cognitive memory running in under a minute with zero infrastructure decisions. When you need dream cycles, CA3 pattern completion, reconsolidation, or scale past ~10K memories, graduate to [full CORTEX](https://github.com/Rezzyman/cortex).
 
 ---
 
